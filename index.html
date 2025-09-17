@@ -45,14 +45,14 @@
   <div class="carrossel-previa direita"></div>
 </div>
 
-  <section id="servicos" style="margin-top: 3rem;">
-    <h2>Nossos Serviços</h2>
+  <section id="servicos" style="margin-top: 3rem; text-align: center; font-size: large;">
+    <h2 class="reveal">Nossos Serviços</h2>
     <div class="servico">
       <img width="28" heigth="28" src="assets/consulta-icon.png" alt="Atendimento médico">
       <p><strong>Atendimento médico:</strong> Consultas com especialistas em diversas áreas.</p>
     </div>
     <div class="servico">
-      <img width="28" heigth="28" src="assets/exame-icon.png" alt="Exames laboratoriais">
+      <img width="28" heigth="28" src="assets/exame.png" alt="Exames laboratoriais">
       <p><strong>Exames laboratoriais e de imagem:</strong> Resultados em até 72 horas.</p>
     </div>
     <div class="servico">
@@ -65,13 +65,13 @@
   </section>
 
 
-  <section id="equipe" style="margin-top: 3rem;">
-    <h2>Nossa Equipe</h2>
+  <section id="equipe" style="margin-top: 3rem; text-align: center; font-size: large;">
+    <h2 class="reveal">Equipe</h2>
     <div class="membros">
       <div class="membro">
         <img src="assets/equipe1.jpg" width="400" height="400" alt="Médica Letíca Garcia">
         <h3>Dra. Letícia Garcia</h3>
-        <p>Médico Clínico Geral</p>
+        <p>Médica Clínica Geral</p>
       </div>
       <div class="membro">
         <img src="assets/equipe2.jpg" width="400" height="400" alt="Nutricionista Pamela Santos">
@@ -87,9 +87,9 @@
   </section>
 
 
-  <section id="contato" style="margin-top: 3rem;">
-    <h2>Agende seu atendimento</h2>
-    <form>
+  <section id="contato" style="margin-top: 3rem; text-align: center; font-size: large;">
+    <h2 class="reveal">Agende seu atendimento</h2>
+    <form class="reveal">
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" required>
 
@@ -112,6 +112,8 @@
   </footer>
 
   <button id="btnVoltarTopo" title="Voltar ao topo">↑</button>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
 
   <script>
     const slides = document.querySelectorAll('.carrossel-slide');
@@ -160,6 +162,15 @@
             behavior: 'smooth'
         });
     };
+
+    ScrollReveal().reveal('.reveal', {
+        distance: '60px',  // Distância que o elemento irá se mover
+        duration: 1200,    // Duração da animação
+        easing: 'ease-in-out', // Efeito de transição
+        origin: 'bottom',  // De onde a animação virá (pode ser 'top', 'left', 'right'...)
+        interval: 100,     // Intervalo de tempo entre os elementos
+        reset: true,
+    });
 
 </script>
 </body>
