@@ -6,8 +6,8 @@ body {
 }
 
 section {
-  padding: 3rem 2rem; /* espaço interno */
-  margin: 2rem 0;     /* espaço externo entre seções */
+  padding: 3rem 2rem;
+  margin: 2rem 0;
 }
 
 header {
@@ -22,9 +22,9 @@ h1, h2 {
 }
 
 h2 {
-  margin-bottom: 1.5rem; /* espaço entre título e conteúdo */
+  margin-bottom: 1.5rem;
   color: #264653;
-  border-bottom: 2px solid #2a9d8f; /* linha abaixo do título (opcional) */
+  border-bottom: 2px solid #2a9d8f;
   display: inline-block;
   padding-bottom: 0.5rem;
 }
