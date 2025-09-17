@@ -8,8 +8,10 @@
 </head>
 <body>
   <header>
-    <h1>Clínica Saúde Popular</h1>
-    <p></p>
+    <div class="logo-e-titulo">
+      <img src="assets/clinica-de-saude-logo.png" alt="Logo da Clínica Saúde Popular" width="60" height="60">
+      <h1>Clínica Saúde Popular</h1>
+    </div>
     <nav>
       <a href="#servicos">Serviços</a>
       <a href="#equipe">Equipe</a>
@@ -17,95 +19,109 @@
     </nav>
   </header>
 
-  <div class="banner">
-    <h1>Bem vindo à Clínica Saúde Popular!</h1>
-    <p>Atendimento humanizado e acessível para toda a família.</p>
-  </div>
-  
+  <div class="conteudo-principal">
+    <div class="banner">
+      <h1>Bem vindo à Clínica Saúde Popular!</h1>
+      <p>Atendimento humanizado e acessível para toda a família.</p>
+    </div>
+    
     <div class="carrossel">
-  <div class="carrossel-previa esquerda"></div>
-  <button class="carrossel-btn esquerda">&#8592;</button>
-  <div class="carrossel-slide ativo">
-    <img src="assets/pesquisa1.jpg" alt="Descrição 1">
-    <div class="carrossel-texto">Monte sua árvore genealógica conosco!</div>
-  </div>
-  <div class="carrossel-slide">
-    <img src="assets/vacinacao1.jpg" alt="Descrição 2">
-    <div class="carrossel-texto">Vacinação gratuíta em parceria com o Governo!</div>
-  </div>
-  <div class="carrossel-slide">
-    <img src="assets/laboratorio1.jpg" alt="Descrição 3">
-    <div class="carrossel-texto">Exames laboratoriais de altíssima qualidade!</div>
-  </div>
-  <div class="carrossel-slide">
-    <img src="assets/nutricao1.jpg" alt="Descrição 4">
-    <div class="carrossel-texto">Avaliação nutricional e novo atendimento digital com profissionais!</div>
-  </div>
-  <button class="carrossel-btn direita">&#8594;</button>
-  <div class="carrossel-previa direita"></div>
-</div>
-
-  <section id="servicos" style="margin-top: 3rem; text-align: center; font-size: large;">
-    <h2 class="reveal">Nossos Serviços</h2>
-    <div class="servico">
-      <img width="28" heigth="28" src="assets/consulta-icon.png" alt="Atendimento médico">
-      <p><strong>Atendimento médico:</strong> Consultas com especialistas em diversas áreas.</p>
-    </div>
-    <div class="servico">
-      <img width="28" heigth="28" src="assets/exame.png" alt="Exames laboratoriais">
-      <p><strong>Exames laboratoriais e de imagem:</strong> Resultados em até 72 horas.</p>
-    </div>
-    <div class="servico">
-      <img width="28" heigth="28" src="assets/nutricao-icon.png" alt="Nutricionista">
-      <p><strong>Aconselhamento nutricional:</strong> Planos alimentares personalizados e novo atendimento digital.</p>
-    </div>
-    <div class="servico">
-      <img width="28" heigth="28" src="assets/vacina-icon.png" alt="Vacinação">
-      <p><strong>Vacinação:</strong> Projeto de imunizações para todas as idades em parceiria com o Governo.</p>
-  </section>
-
-
-  <section id="equipe" style="margin-top: 3rem; text-align: center; font-size: large;">
-    <h2 class="reveal">Equipe</h2>
-    <div class="membros">
-      <div class="membro">
-        <img src="assets/equipe1.jpg" width="400" height="400" alt="Médica Letíca Garcia">
-        <h3>Dra. Letícia Garcia</h3>
-        <p>Médica Clínica Geral</p>
+      <div class="carrossel-previa esquerda"></div>
+      <button class="carrossel-btn esquerda">&#8592;</button>
+      <div class="carrossel-slide ativo">
+        <img src="assets/pesquisa1.jpg" alt="Descrição 1">
+        <div class="carrossel-texto">Monte sua árvore genealógica conosco!</div>
       </div>
-      <div class="membro">
-        <img src="assets/equipe2.jpg" width="400" height="400" alt="Nutricionista Pamela Santos">
-        <h3>Pamela Santos</h3>
-        <p>Nutricionista</p>
+      <div class="carrossel-slide">
+        <img src="assets/vacinacao1.jpg" alt="Descrição 2">
+        <div class="carrossel-texto">Vacinação gratuíta em parceria com o Governo!</div>
       </div>
-      <div class="membro">
-        <img src="assets/equipe3.jpg" width="400" height="400" alt="Enfermeira Humberto Matos">
-        <h3>Humberto Matos</h3>
-        <p>Enfermeiro</p>
+      <div class="carrossel-slide">
+        <img src="assets/laboratorio1.jpg" alt="Descrição 3">
+        <div class="carrossel-texto">Exames laboratoriais de altíssima qualidade!</div>
       </div>
+      <div class="carrossel-slide">
+        <img src="assets/nutricao1.jpg" alt="Descrição 4">
+        <div class="carrossel-texto">Avaliação nutricional e novo atendimento digital com profissionais!</div>
+      </div>
+      <div class="carrossel-slide">
+        <img src="assets/exame1.jpg" alt="Descrição 5">
+        <div class="carrossel-texto">Pronto atendimento e encaminhamento a especialistas!</div>
+      </div>
+      <button class="carrossel-btn direita">&#8594;</button>
+      <div class="carrossel-previa direita"></div>
     </div>
-  </section>
 
+    <section id="servicos" class="fundo-claro">
+      <h2 class="reveal">Serviços</h2>
+      <div class="servico">
+        <img width="28" heigth="28" src="assets/consulta-icon.png" alt="Atendimento médico">
+        <p><strong>Atendimento médico:</strong> Consultas com especialistas em diversas áreas.</p>
+      </div>
+      <div class="servico">
+        <img width="28" heigth="28" src="assets/exame.png" alt="Exames laboratoriais">
+        <p><strong>Exames laboratoriais e de imagem:</strong> Resultados em até 72 horas.</p>
+      </div>
+      <div class="servico">
+        <img width="28" heigth="28" src="assets/nutricao-icon.png" alt="Nutricionista">
+        <p><strong>Aconselhamento nutricional:</strong> Planos alimentares personalizados e novo atendimento digital.</p>
+      </div>
+      <div class="servico">
+        <img width="28" heigth="28" src="assets/vacina-icon.png" alt="Vacinação">
+        <p><strong>Vacinação:</strong> Projeto de imunizações para todas as idades em parceiria com o Governo.</p>
+      </div>
+    </section>
 
-  <section id="contato" style="margin-top: 3rem; text-align: center; font-size: large;">
-    <h2 class="reveal">Agende seu atendimento</h2>
-    <form class="reveal">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
+    <section id="equipe" class="fundo-escuro">
+      <h2 class="reveal">Equipe</h2>
+      <div class="membros">
+        <div class="membro">
+          <img src="assets/equipe0.jpg" alt="Médico Carlos Eduardo Silva">
+          <h3>Dr. Carlos Eduardo Silva</h3>
+          <p>Médico Clínico Geral</p>
+        </div>
+        <div class="membro">
+          <img src="assets/equipe1.jpg" alt="Médica Letíca Garcia">
+          <h3>Dra. Letícia Garcia</h3>
+          <p>Médica Clínica Geral</p>
+        </div>
+        <div class="membro">
+          <img src="assets/equipe2.jpg" alt="Nutricionista Pamela Santos">
+          <h3>Pamela Santos</h3>
+          <p>Nutricionista</p>
+        </div>
+        <div class="membro">
+          <img src="assets/equipe3.jpg" alt="Enfermeira Humberto Matos">
+          <h3>Humberto Matos</h3>
+          <p>Enfermeiro</p>
+        </div>
+        <div class="membro">
+          <img src="assets/equipe4.jpg" alt="Técnica de Laboratório Diana Yasmin  Rodrigues">
+          <h3>Diana Yasmin Rodrigues</h3>
+          <p>Técnica de Laboratório</p>
+        </div>
+      </div>
+    </section>
 
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
+    <section id="contato" class="fundo-claro"">
+      <h2 class="reveal">Agende seu atendimento</h2>
+      <form class="reveal">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-      <label for="cidade">Cidade:</label>
-      <input type="text" id="cidade" name="cidade" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="estado">Estado:</label>
-      <input type="text" id="estado" name="estado" required>
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
 
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" required>
 
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </div>
 
   <footer>
     <p>&copy; 2025 Clínica Saúde Popular - Todos os direitos reservados</p>
@@ -114,7 +130,6 @@
   <button id="btnVoltarTopo" title="Voltar ao topo">↑</button>
 
   <script src="https://unpkg.com/scrollreveal"></script>
-
   <script>
     const slides = document.querySelectorAll('.carrossel-slide');
     const previaEsq = document.querySelector('.carrossel-previa.esquerda');
@@ -137,6 +152,7 @@
       atual = (atual - 1 + slides.length) % slides.length;
       mostrarSlide(atual);
     };
+
     document.querySelector('.carrossel-btn.direita').onclick = () => {
       atual = (atual + 1) % slides.length;
       mostrarSlide(atual);
@@ -144,9 +160,9 @@
 
     mostrarSlide(atual);
     
+    // botão de scroll to top
     let btnVoltarTopo = document.getElementById("btnVoltarTopo");
 
-    // Mostra ou esconde o botão com base na posição da página
     window.onscroll = function() {
         if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             btnVoltarTopo.style.display = "block";
@@ -155,7 +171,6 @@
         }
     };
 
-    // Rola suavemente para o topo da página quando o botão é clicado
     btnVoltarTopo.onclick = function() {
         window.scrollTo({
             top: 0,
@@ -163,15 +178,14 @@
         });
     };
 
-    ScrollReveal().reveal('.reveal', {
-        distance: '60px',  // Distância que o elemento irá se mover
-        duration: 1200,    // Duração da animação
-        easing: 'ease-in-out', // Efeito de transição
-        origin: 'bottom',  // De onde a animação virá (pode ser 'top', 'left', 'right'...)
-        interval: 100,     // Intervalo de tempo entre os elementos
-        reset: true,
+    ScrollReveal().reveal('.reveal, .servico, .membro', {
+      distance: '60px',
+      duration: 1200,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      interval: 100,
+      reset: true,
     });
-
-</script>
+  </script>
 </body>
 </html>
