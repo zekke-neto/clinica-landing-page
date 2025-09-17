@@ -11,10 +11,47 @@ section {
 }
 
 header {
-  background: #2a9d8f;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+  background: #bb0909;
+  color: #ebebeb;
+  text-align: left;
+  padding: 0.7rem 2rem;
+  position: static;
+  display: flex;
+  font: 20px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-direction: column;
+}
+
+header nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.3rem;
+  justify-content: flex-end;
+}
+
+header nav a {
+  background: #bb0909;
+  color: #fff;
+  padding: 0.2rem 1.5rem;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: background 0.24s, color 0.2s;
+  border: none;
+  outline: none;
+}
+
+header nav a:hover,
+header nav a:focus {
+  background: #fff;
+  color: #bb0909;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+
+header p {
+  text-align: left;
+  padding-left: 3rem;
 }
 
 h1, h2 {
@@ -23,8 +60,8 @@ h1, h2 {
 
 h2 {
   margin-bottom: 1.5rem;
-  color: #264653;
-  border-bottom: 2px solid #2a9d8f;
+  color: #410909;
+  border-bottom: 2px solid #bb0909;
   display: inline-block;
   padding-bottom: 0.5rem;
 }
@@ -33,21 +70,164 @@ h2 {
   padding: 2rem;
 }
 
+.banner {
+  background: url('assets/banner.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  font: 18px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 3rem 1.5rem;
+  margin: auto;
+  box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.4);
+}
+
+.carrossel {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 350px;
+  margin: 5rem auto;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.carrossel-previa {
+  width: 180px;
+  height: 240px;
+  background: rgba(34,34,34,0.5);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.3s;
+  flex-shrink: 0;       
+}
+
+.carrossel-previa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  filter: blur(1px) grayscale(0.3);
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.carrossel-slide {
+  display: none;
+  position: relative;
+  width: 600px;
+  height: 350px;
+  margin: 0 2rem;
+  z-index: 2;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.carrossel-slide.ativo {
+  display: block;
+  animation: fadeIn 0.7s;
+}
+
+.carrossel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.carrossel-texto {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem 2rem;
+  color: #ebebeb;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0.0) 100%);
+  font-size: 1.2rem;
+  border-radius: 0 0 16px 16px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #bb0909;
+  color: #ebebeb;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 85%;
+  transition: background 0.2s;
+}
+.carrossel-btn.esquerda { left: 2%; }
+.carrossel-btn.direita  { right: 2%; }
+.carrossel-btn:hover { background: #410909; }
+
+#btnVoltarTopo {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #bb0909;
+  color: white;
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, opacity 0.3s;
+  opacity: 85%;
+}
+
+#btnVoltarTopo:hover {
+  background-color: #630000;
+  opacity: 1;
+}
+
 .servico {
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .servico img {
-  max-width: 200px;
-  display: block;
+  max-width: 40px;
+  max-height: 40px;
   border-radius: 8px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  display: block;
 }
 
 .membros {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
+}
+
+.icone {
+  background: url('assets/lupa.png') no-repeat center;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
 }
 
 .membro {
@@ -86,14 +266,14 @@ form input, form button {
 
 form button {
   margin-top: 1rem;
-  background: #2a9d8f;
+  background: #960606;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 footer {
-  background: #264653;
+  background: #580000;
   color: white;
   text-align: center;
   padding: 1rem;

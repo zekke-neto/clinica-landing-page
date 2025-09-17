@@ -9,27 +9,63 @@
 <body>
   <header>
     <h1>Clínica Saúde Popular</h1>
-    <p>Cuidando da sua saúde com carinho e tecnologia</p>
+    <p></p>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
 
-  <section id="servicos">
+  <div class="banner">
+    <h1>Bem vindo à Clínica Saúde Popular!</h1>
+    <p>Atendimento humanizado e acessível para toda a família.</p>
+  </div>
+  
+    <div class="carrossel">
+  <div class="carrossel-previa esquerda"></div>
+  <button class="carrossel-btn esquerda">&#8592;</button>
+  <div class="carrossel-slide ativo">
+    <img src="assets/pesquisa1.jpg" alt="Descrição 1">
+    <div class="carrossel-texto">Monte sua árvore genealógica conosco!</div>
+  </div>
+  <div class="carrossel-slide">
+    <img src="assets/vacinacao1.jpg" alt="Descrição 2">
+    <div class="carrossel-texto">Vacinação gratuíta em parceria com o Governo!</div>
+  </div>
+  <div class="carrossel-slide">
+    <img src="assets/laboratorio1.jpg" alt="Descrição 3">
+    <div class="carrossel-texto">Exames laboratoriais de altíssima qualidade!</div>
+  </div>
+  <div class="carrossel-slide">
+    <img src="assets/nutricao1.jpg" alt="Descrição 4">
+    <div class="carrossel-texto">Avaliação nutricional e novo atendimento digital com profissionais!</div>
+  </div>
+  <button class="carrossel-btn direita">&#8594;</button>
+  <div class="carrossel-previa direita"></div>
+</div>
+
+  <section id="servicos" style="margin-top: 3rem;">
     <h2>Nossos Serviços</h2>
     <div class="servico">
-      <img src="assets/img1.jpg" alt="Atendimento médico">
+      <img width="28" heigth="28" src="assets/consulta-icon.png" alt="Atendimento médico">
       <p><strong>Atendimento médico:</strong> Consultas com especialistas em diversas áreas.</p>
     </div>
     <div class="servico">
-      <img src="assets/img2.jpg" alt="Exames laboratoriais">
-      <p><strong>Exames laboratoriais e de imagem:</strong> Resultados rápidos e precisos.</p>
+      <img width="28" heigth="28" src="assets/exame-icon.png" alt="Exames laboratoriais">
+      <p><strong>Exames laboratoriais e de imagem:</strong> Resultados em até 72 horas.</p>
     </div>
     <div class="servico">
-      <img src="assets/img3.jpg" alt="Nutricionista">
-      <p><strong>Aconselhamento nutricional:</strong> Planos alimentares personalizados.</p>
+      <img width="28" heigth="28" src="assets/nutricao-icon.png" alt="Nutricionista">
+      <p><strong>Aconselhamento nutricional:</strong> Planos alimentares personalizados e novo atendimento digital.</p>
     </div>
+    <div class="servico">
+      <img width="28" heigth="28" src="assets/vacina-icon.png" alt="Vacinação">
+      <p><strong>Vacinação:</strong> Projeto de imunizações para todas as idades em parceiria com o Governo.</p>
   </section>
 
 
-  <section id="equipe">
+  <section id="equipe" style="margin-top: 3rem;">
     <h2>Nossa Equipe</h2>
     <div class="membros">
       <div class="membro">
@@ -51,7 +87,7 @@
   </section>
 
 
-  <section id="contato">
+  <section id="contato" style="margin-top: 3rem;">
     <h2>Agende seu atendimento</h2>
     <form>
       <label for="nome">Nome:</label>
@@ -74,5 +110,57 @@
   <footer>
     <p>&copy; 2025 Clínica Saúde Popular - Todos os direitos reservados</p>
   </footer>
+
+  <button id="btnVoltarTopo" title="Voltar ao topo">↑</button>
+
+  <script>
+    const slides = document.querySelectorAll('.carrossel-slide');
+    const previaEsq = document.querySelector('.carrossel-previa.esquerda');
+    const previaDir = document.querySelector('.carrossel-previa.direita');
+    let atual = 0;
+
+    function mostrarSlide(idx) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('ativo', i === idx);
+      });
+
+      const idxPrev = (idx - 1 + slides.length) % slides.length;
+      const idxNext = (idx + 1) % slides.length;
+
+      previaEsq.innerHTML = `<img src="${slides[idxPrev].querySelector('img').src}" alt="Prévia esquerda">`;
+      previaDir.innerHTML = `<img src="${slides[idxNext].querySelector('img').src}" alt="Prévia direita">`;
+    }
+
+    document.querySelector('.carrossel-btn.esquerda').onclick = () => {
+      atual = (atual - 1 + slides.length) % slides.length;
+      mostrarSlide(atual);
+    };
+    document.querySelector('.carrossel-btn.direita').onclick = () => {
+      atual = (atual + 1) % slides.length;
+      mostrarSlide(atual);
+    };
+
+    mostrarSlide(atual);
+    
+    let btnVoltarTopo = document.getElementById("btnVoltarTopo");
+
+    // Mostra ou esconde o botão com base na posição da página
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            btnVoltarTopo.style.display = "block";
+        } else {
+            btnVoltarTopo.style.display = "none";
+        }
+    };
+
+    // Rola suavemente para o topo da página quando o botão é clicado
+    btnVoltarTopo.onclick = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+</script>
 </body>
 </html>
